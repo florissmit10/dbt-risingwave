@@ -131,3 +131,6 @@ dmypy.json
 
 # pycharm
 .idea/*
+
+# dbt test logs
+logs/

@@ -17,6 +17,9 @@ setup(
     packages=find_namespace_packages(include=["dbt", "dbt.*"]),
     include_package_data=True,
     install_requires=[
-        "dbt-core~=1.3.0.",
+        "dbt-postgres~=1.3.0",
     ],
+    extras_require={
+        "dev": ["dbt-tests-adapter~=1.3.0"],
+    },
 )

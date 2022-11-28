@@ -12,4 +12,11 @@ pytest_plugins = ["dbt.tests.fixtures.project"]
 # The profile dictionary, used to write out profiles.yml
 @pytest.fixture(scope="class")
 def dbt_profile_target():
-    pass
+    return {
+        'type': 'risingwave',
+        'host': 'localhost',
+        'port': 4566,
+        'user': 'root',
+        'password': '',
+        'database': 'dev',
+    }

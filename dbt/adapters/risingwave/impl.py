@@ -1,11 +1,10 @@
-
-from dbt.adapters.sql import SQLAdapter as adapter_cls
+from dbt.adapters.postgres import PostgresAdapter
 
 from dbt.adapters.risingwave import RisingWaveConnectionManager
 
 
 
-class RisingWaveAdapter(adapter_cls):
+class RisingWaveAdapter(PostgresAdapter):
     """
     Controls actual implmentation of adapter, and ability to override certain methods.
     """
